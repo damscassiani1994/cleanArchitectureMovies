@@ -1,0 +1,37 @@
+description = "CleanArchitecture_Test"
+
+buildscript {
+  ext {
+    springBootVersion = '2.2.1.RELEASE'
+    //springCloudVersion = 'Greenwich.M1'
+  }
+  repositories {
+    mavenCentral()
+  }
+  
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+  }
+  
+}
+
+apply from: './main.gradle'
+
+subprojects {
+  apply plugin: "java"
+  
+  ext {
+    springBootVersion = '2.2.0.RELEASE'
+  }
+  
+  
+  sourceCompatibility = JavaVersion.VERSION_11
+
+  repositories {
+     mavenCentral()
+  }
+  
+  repositories {
+    mavenCentral()
+  }
+}
